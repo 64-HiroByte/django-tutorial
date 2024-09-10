@@ -5,7 +5,7 @@ services:
     build: .
 
     # command: python manage.py runserver 0.0.0.0:3000  # テンプレートの設定
-    command: bash
+    # command: bash
 
     ports:
       # - "3000:3000"  # テンプレートの設定(ruby?)
@@ -14,7 +14,7 @@ services:
     volumes:
       - '.:/django_tutorial'
     depends_on:
-      db
+      - db
     
     # チュートリアル中のみ有効、その後はコメントアウト
     tty: true
