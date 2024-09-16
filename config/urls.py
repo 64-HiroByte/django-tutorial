@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
+    # path('', include('polls.urls')),  # "0.0.0.0:8000"にアクセスした場合、polls.urlsのurlpatternsにしたがう
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
 ]
